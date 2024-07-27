@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { Button, StyleSheet } from "react-native";
 
 export default StyleSheet.create({
     container: {
@@ -28,5 +28,5 @@ export default StyleSheet.create({
         color:'#00008B',
         textAlign:'center',
         textTransform:'capitalize',
-    }      
+    },
 })
