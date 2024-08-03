@@ -8,16 +8,21 @@ const onClickMe = () => {
 
 type ContextProps = {
   message: string;
-  fullname: string;
+  //fullname: string;
+  onButtonClick: () => void;
 };
 
-const Context = ({ message,fullname }: ContextProps): React.JSX.Element => {
-
-  const [displayFullname,setdisplayFullname] = React.useState('');
-  const handleButtonClick = () => {
+const Context = ({
+  message,
+  onButtonClick,
+}: ContextProps): React.JSX.Element => {
+  const [displayFullname, setdisplayFullname] = React.useState("");
+  
+    /*const handleButtonClick = () => {
     setdisplayFullname(fullname);
     Alert.alert("Hello",`Fullname has changed to : ${fullname}`)
-  }
+  }*/
+  
 
   return (
     <View style={stylesPractice.content}>
@@ -25,7 +30,7 @@ const Context = ({ message,fullname }: ContextProps): React.JSX.Element => {
       <Text style={stylesPractice.text}>{displayFullname}</Text>
       <Button
         title="Click Me"
-        onPress={handleButtonClick}
+        onPress={onButtonClick}
         color="#F74DFF"
         /* onPress={() => Alert.alert("Hi", "React Native is Fun!!")}*/
       ></Button>
