@@ -3,13 +3,13 @@ import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 
 type AppFooterProps = {
-  text: string; //ถ้ามีเครื่องหมายคำถาม เช่น year? แปลว่า props ไม่จำเป็นต้องส่งค่ามาก็ได้
+  footerMessage: string; //ถ้ามีเครื่องหมายคำถาม เช่น year? แปลว่า props ไม่จำเป็นต้องส่งค่ามาก็ได้
 };
 
-const AppFooter = ({ text }: AppFooterProps): React.JSX.Element => {
+const AppFooter = ({ footerMessage }: AppFooterProps): React.JSX.Element => {
   return (
     <View style={styles.footer}>
-      <Text style={styles.footerText}>{text}</Text>
+      <Text style={styles.footerText}>{footerMessage}</Text>
     </View>
   );
 };

@@ -4,13 +4,13 @@ import AppFooter from "./components/AppFooter";
 import AppHeader from "./components/AppHeader";
 import Content from "./components/Content";
 
-export default function App(): React.JSX.Element {
+export default function App1(): React.JSX.Element {
   return (
     <View style={styles.container}>
-      <AppHeader text="Jirapat Anantasirijinda"/>
-      <Content text="Message from App.tsx"/>
+      <AppHeader fullname="Jirapat Anantasirijinda" />
+      <Content text="Message from App.tsx" />
       <StatusBar style="auto" />
-      <AppFooter text="Thai-nichi Institute of Technology"/>
+      <AppFooter text="Thai-nichi Institute of Technology" />
     </View>
   );
 }
