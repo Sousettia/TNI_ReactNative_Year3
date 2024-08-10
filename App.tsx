@@ -1,15 +1,14 @@
-import { StyleSheet, Text, View , TextInput} from "react-native";
+import { View, Text } from "react-native";
 import React from "react";
-import ProfileScreen from "./components/ProfileScreen";
-
-const App = () => {
+import FlatListExample from "./components/FlatListExample";
+import FlatListcallBackend from "./components/FlatListcallBackend";
+const App = (): React.JSX.Element => {
   return (
+    //<FlatListExample/>
     <View>
-      <ProfileScreen />
+      <FlatListcallBackend/>
     </View>
   );
 };
 
 export default App;
-
-const styles = StyleSheet.create({});
