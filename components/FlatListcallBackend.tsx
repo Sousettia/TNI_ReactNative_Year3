@@ -1,4 +1,10 @@
-import { ActivityIndicator, FlatList, StyleSheet, Text, View } from "react-native";
+import {
+  ActivityIndicator,
+  FlatList,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 import React, { useEffect, useState } from "react";
 
 interface User {
@@ -37,17 +43,16 @@ const FlatListcallBackend = () => {
 
   return (
     <View style={styles.container}>
-      {loading?(
-        <ActivityIndicator size="large" color="blue"/>
-
-      ):( //ถ้าข้อมูลถูกโหลดมาแล้วจะแสดง FlatList
+      {loading ? (
+        <ActivityIndicator size="large" color="blue" />
+      ) : (
+        //ถ้าข้อมูลถูกโหลดมาแล้วจะแสดง FlatList
         <FlatList
-            data={data}
-            renderItem={_renderItem}
-            keyExtractor={item => item.id.toString()}
+          data={data}
+          renderItem={_renderItem}
+          keyExtractor={(item) => item.id.toString()}
         />
-      )
-      }
+      )}
     </View>
   );
 };
