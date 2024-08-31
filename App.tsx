@@ -1,13 +1,23 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import ModalExample from './components/ModalExample'
+import React from 'react';
+import HomeScreen from './screens/HomeScreen';
+import AboutScreen from './screens/AboutScreen';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { NavigationContainer } from '@react-navigation/native';
+import CreatePostScreen from './screens/CreatePostScreen';
 
-const App = () => {
+const App = (): React.JSX.Element => {
+
+  const HomeStack = createNativeStackNavigator();
+
   return (
-    <ModalExample></ModalExample>
-  )
+    <NavigationContainer>
+      <HomeStack.Navigator initialRouteName='Home'>
+        <HomeStack.Screen name='Home' component={HomeScreen} />
+        <HomeStack.Screen name='About' component={AboutScreen} />
+        <HomeStack.Screen name='Post' component={CreatePostScreen} />
+      </HomeStack.Navigator>
+    </NavigationContainer>
+  );
 }
 
-export default App
-
-const styles = StyleSheet.create({})
+export default App;
