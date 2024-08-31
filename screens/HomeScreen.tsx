@@ -1,7 +1,8 @@
 import { View, Text, Button, StyleSheet } from "react-native";
 import React from "react";
+import MaterialIcon from "react-native-vector-icons/MaterialCommunityIcons";
 
-const HomeScreen = ({ navigation,route }: any): React.JSX.Element => {
+const HomeScreen = ({ navigation, route }: any): React.JSX.Element => {
   const gotoAbout = () => {
     navigation.navigate("About", {
       companyName: "Thai-Nichi Institute of Technology",
@@ -11,11 +12,15 @@ const HomeScreen = ({ navigation,route }: any): React.JSX.Element => {
 
   return (
     <View style={styles.container}>
+      <MaterialIcon name="home" size={50} color={"pink"} />
       <Text style={styles.header}>HomeScreen</Text>
       <Button title="About us" onPress={gotoAbout}></Button>
 
       <View style={styles.postContainer}>
-        <Button title="Create Post" onPress={()=>navigation.navigate("Post")}></Button>
+        <Button
+          title="Create Post"
+          onPress={() => navigation.navigate("Post")}
+        ></Button>
         <Text style={styles.postText}>Post:</Text>
         <Text style={styles.postContent}>{route.params?.post}</Text>
       </View>
