@@ -14,7 +14,7 @@ import {
     error: string | null;
   }
   
-  const WeatherLondon = (): React.JSX.Element => {
+  const WeatherBangkok = (): React.JSX.Element => {
     const [state, setState] = useState<WeatherState>({
       data: null,
       loading: true,
@@ -94,7 +94,7 @@ import {
     );
   };
   
-  export default WeatherLondon;
+  export default WeatherBangkok;
   
   const styles = StyleSheet.create({
     container: {
