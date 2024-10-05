@@ -189,7 +189,7 @@ const App = (): React.JSX.Element => {
       </View>
     );
   }
-
+  
   return (
     <>
       <HeaderButtonsProvider stackType="native">
